@@ -32,7 +32,7 @@ def welcome_user(sender, instance, created, **kwargs):
         print(f"[Signal Receiver] Thread ID: {threading.get_ident()}")
         print(f"Welcome, {instance.username}!")
 ```
-
+```
 $ python.exe manage.py shell
 
 from users.models import UserProfile
@@ -42,3 +42,4 @@ print(f"[Caller] Thread ID: {threading.get_ident()}")
 user = UserProfile.objects.create(username="sana", email="sana@example.com")
 [Signal Receiver] Thread ID: 20204
 Welcome, sana!
+```
